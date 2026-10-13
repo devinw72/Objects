@@ -1,4 +1,4 @@
-const movie = {
+/* const movie = {
   title: "Interstellar",
   year: 2014,
   director: "Christopher Nolan",
@@ -21,17 +21,20 @@ function createStudent(name,grade,gpa) {
     IsHonors:gpa>=3.5
   }
 
+} */
+function findByName(students, targetName){
+students= [ ChenZee= {
+  name:targetName,
+  grade:12,
+  gpa:3.5,
+  IsHonors:false,
 }
-console.log(createStudent("Alex", 11, 3.7));
-console.log(createStudent("Alex", 11, 2.7));
-function findByName(students, targetName) {
-   students= [
-  { name:"ChenZee", grade:12,gpa:3.5,IsHonors:false}
-  ]
-  targetName=
+]
+  if(targetName.find=== `ChenZee`);
+  return (students.ChenZee)
   
-}
-
-
-
- 
+  
+  }
+console.log(findByName(students,"ChenZee"));
+console.log(findByName(students,"Jane"));
+console.log(findByName(students,"Marcus"));
