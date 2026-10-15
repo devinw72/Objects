@@ -22,19 +22,14 @@ function createStudent(name,grade,gpa) {
   }
 
 } */
-function findByName(students, targetName){
-students= [ ChenZee= {
-  name:targetName,
-  grade:12,
-  gpa:3.5,
-  IsHonors:false,
-}
-]
-  if(targetName.find=== `ChenZee`);
-  return (students.ChenZee)
-  
-  
+function printRoster(students) {
+students= [
+{ name: "Jane", gpa:3.8},
+{ name:"ChenZee",gpa:3.5},
+{ name:"Dakota",gpa: 3.9
   }
-console.log(findByName(students,"ChenZee"));
-console.log(findByName(students,"Jane"));
-console.log(findByName(students,"Marcus"));
+]
+}
+students.forEach(function(printRoster) {
+  console.log (student.objects)
+});
