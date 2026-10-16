@@ -22,14 +22,19 @@ function createStudent(name,grade,gpa) {
   }
 
 } */
-function printRoster(students) {
+/* function printRoster(students) {
 students= [
-{ name: "Jane", gpa:3.8},
-{ name:"ChenZee",gpa:3.5},
-{ name:"Dakota",gpa: 3.9
-  }
 ]
 }
 students.forEach(function(printRoster) {
   console.log (student.objects)
 });
+students= [
+{ name: "Jane", gpa:3.8},
+{ name:"ChenZee",gpa:3.5},
+{ name:"Dakota",gpa: 3.9
+  }
+] */
+function printRoster(students) {
+  student=[]
+}
