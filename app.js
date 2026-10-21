@@ -70,4 +70,26 @@ const rodents=items.filter(items=>items.category==="rodent")
 console.log(rodents)
 const fishs=items.filter(items=>items.category==="fish")
 console.log(fishs)
-function cheaptoexpensive
+function cart() {
+  let cart=[];
+  return{
+  addItem: function (item) {
+  cart.push(item);
+  console.log(`${item} added to the cart.`);
+  },
+  removeItem: function(item) {
+    cart.splice(item);
+  },
+  viewCart: function(item) {
+    if (cart.length===0)
+      console.log ("The cart is empty")
+    else {
+      console.log("The cart contains:",cart.join",")
+    }
+  }
+  }
+}
+const mycart=cart();
+mycart.addItem("balloon")
+mycart.removeItem("balloon")
+
