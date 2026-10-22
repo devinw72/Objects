@@ -84,7 +84,7 @@ function cart() {
     if (cart.length===0)
       console.log ("The cart is empty")
     else {
-      console.log("The cart contains:",cart.join",")
+      console.log("The cart contains:",cart.join"")
     }
   }
   }
@@ -92,4 +92,5 @@ function cart() {
 const mycart=cart();
 mycart.addItem("balloon")
 mycart.removeItem("balloon")
+
 
