@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(255, 0, 0);
+}
+html,body,*{
+font-size: 10px;
+box-sizing: border-box;
+margin: 0;
+padding:0;
+}
+/* div {
+    height:55rem;
+    width:30rem;
+    background-color: aqua;
+    margin:2.5rem,1.5rem;
+    padding: 1rem;  */
+    /* margin is the space between elements */
+    /* padding is space inside element */
+
+/* ids are most specific, than class, then element */
+.card{
+    background-color: #ff0000;
+        height:55rem;
+    width:30rem;
+    background-color: aqua;
+    margin:2.5rem,1.5rem;
+    padding: 1rem; 
+}
+#test {
+    background-color:#00ff00;
+}
+.card-title{
+    margin: 0;
+    font: size 1.8rem;
+}
