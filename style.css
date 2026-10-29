@@ -3,10 +3,10 @@ body {
     
 }
 html,body,*{
-font-size: 10px;
+font-size: 15px;
 box-sizing: border-box;
-margin: 0;
-padding:0;
+margin: 3;
+padding: 3px;;
 }
 div {
     height:10rem;
