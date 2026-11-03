@@ -6,6 +6,7 @@ font-size: 25px;
 box-sizing: border-box;
 margin: 5px;
 padding:3px;
+font-family: "Raleway", sans-serif;
 }
 .card-btn:hover {
   background-color: #7573ff;
@@ -16,7 +17,7 @@ padding:3px;
   align-items: center;
   text-align: center;
   height: 100vh;
-  color: white;
+  color:white;
   background-image:
     linear-gradient(rgba(8, 84, 130, 0.3), rgba(4, 70, 115, 0.3)),
     url("237968.jpg");
