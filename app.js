@@ -65,3 +65,5 @@ function inject(item) {
         "beforeend",
         `<div class="card">
             <h2 class="card-header">${item.name}</h2>
+            <p>Price: $${item.price.toFixed(2)}</p>
+            <p>Category: ${item.category}</p>
