@@ -1,38 +1,38 @@
 
 
 items= [
-{name:"Rabbit",price:39.00,category:"mammal"},
-{name:"Axolotl",price:150.00,category:"amphibian"},
-{name:"Salamander",price:45.00,category:"amphibian"},
-{name:"Cat",price:30.00,category:"mammal"},
-{name:"Dog",price:30.00,category:"mammal"},
-{name:"Owl",price:250.00,category:"bird"},
-{name:"MockingBird",price:330.00,category:"bird"},
-{name:"Turkey",price:60.00,category:"bird"},
-{name:"Parakeets",price:30.00,category:"bird"},
-{name:"Hamster",price:25.00,category:"rodent"},
-{name:"Squirrel",price:150.00,category:"rodent"},
-{name:"Parrot",price:60.00,category:"bird"},
-{name:"Goldfish",price:25.00,category:"fish"},
-{name:"SeaHorse",price:30.00,category:"fish"},
-{name:"Turtle",price:60.00,category:"reptile"},
-{name:"Gecko",price:45.00,category:"reptile"},
-{name:"Bearded Dragon",price:80.00,category:"reptile"},
-{name:"Fennec Fox",price:800.00,category:"mammal"},
-{name:"Sugar Gliders",price:300.00,category:"mammal"},
-{name:"Frog",price:45.00,category:"amphibian"}
+{name:"Rabbit",price:39.00,category:"Mammal"},
+{name:"Axolotl",price:150.00,category:"Amphibian"},
+{name:"Salamander",price:45.00,category:"Amphibian"},
+{name:"Cat",price:30.00,category:"Mammal"},
+{name:"Dog",price:30.00,category:"Mammal"},
+{name:"Owl",price:250.00,category:"Bird"},
+{name:"MockingBird",price:330.00,category:"Bird"},
+{name:"Turkey",price:60.00,category:"Bird"},
+{name:"Parakeets",price:30.00,category:"Bird"},
+{name:"Hamster",price:25.00,category:"Rodent"},
+{name:"Squirrel",price:150.00,category:"Rodent"},
+{name:"Parrot",price:60.00,category:"Bird"},
+{name:"Goldfish",price:25.00,category:"Fish"},
+{name:"SeaHorse",price:30.00,category:"Fish"},
+{name:"Turtle",price:60.00,category:"Reptile"},
+{name:"Gecko",price:45.00,category:"Reptile"},
+{name:"Bearded Dragon",price:80.00,category:"Reptile"},
+{name:"Fennec Fox",price:800.00,category:"Mammal"},
+{name:"Sugar Gliders",price:300.00,category:"Mammal"},
+{name:"Frog",price:45.00,category:"Amphibian"}
 ]
-const amphibians=items.filter(items=>items.category==="amphibian")
+const amphibians=items.filter(items=>items.category==="Amphibian")
 console.log(amphibians)
-const reptiles=items.filter(items=>items.category==="reptile")
+const reptiles=items.filter(items=>items.category==="Reptile")
 console.log(reptiles)
-const mammals=items.filter(items=>items.category==="mammal")
+const mammals=items.filter(items=>items.category==="Mammal")
 console.log(mammals)
-const birds=items.filter(items=>items.category==="bird")
+const birds=items.filter(items=>items.category==="Bird")
 console.log(birds)
-const rodents=items.filter(items=>items.category==="rodent")
+const rodents=items.filter(items=>items.category==="Rodent")
 console.log(rodents)
-const fishs=items.filter(items=>items.category==="fish")
+const fishs=items.filter(items=>items.category==="Fish")
 console.log(fishs)
 function cart() {
   let cart=[];
@@ -59,11 +59,16 @@ mycart.addItem("balloon")
 mycart.removeItem("balloon")
 
 function inject(item) {
-    const container = document.querySelector(".container");
-
-    container.insertAdjacentHTML(
-        "beforeend",
-        `<div class="card">
-            <h2 class="card-header">${item.name}</h2>
-            <p>Price: $${item.price.toFixed(2)}</p>
-            <p>Category: ${item.category}</p>
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="card">
+    <h2 class="card-header">${item.name}</h2>
+    <p>Price:${item.price}</p> 
+    <p>Category of Animal:${item.category}</p> 
+</div>`
+);
+}
+items.forEach(item => {
+    inject(item);
+})
