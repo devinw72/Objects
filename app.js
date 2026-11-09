@@ -1,7 +1,6 @@
 
-
-items= [
-{name:"Rabbit",price:39.00,category:"Mammal"},
+items=[
+{name:"Rabbit",price:40.00,category:"Mammal"},
 {name:"Axolotl",price:150.00,category:"Amphibian"},
 {name:"Salamander",price:45.00,category:"Amphibian"},
 {name:"Cat",price:30.00,category:"Mammal"},
@@ -64,8 +63,9 @@ function inject(item) {
     "beforeend",
     `<div class="card">
     <h2 class="card-header">${item.name}</h2>
-    <p>Price:${item.price}</p> 
+    <p>Price:$${item.price.toFixed(2)}</p> 
     <p>Category of Animal:${item.category}</p> 
+    <button>Add to Cart</button>
 </div>`
 );
 }
