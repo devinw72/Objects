@@ -58,4 +58,12 @@ const mycart=cart();
 mycart.addItem("balloon")
 mycart.removeItem("balloon")
 
-
+const box = document.querySelector(".box");
+box.style.backgroundColor = "red";
+const container = document.getElementById("container");
+items.array.forEach(items => { 
+<div class="card">
+<h2>${items.name}</h2>
+ <p>$${items.price}</p>
+ </div>
+});
