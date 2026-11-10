@@ -1,6 +1,5 @@
-
 items=[
-{name:"Rabbit",price:40.00,category:"Mammal"},
+{name:"Rabbit",price:40.00,category:"Mammal",img:"https://share.google/d27iKlcAiqIvQlbIN"},
 {name:"Axolotl",price:150.00,category:"Amphibian"},
 {name:"Salamander",price:45.00,category:"Amphibian"},
 {name:"Cat",price:30.00,category:"Mammal"},
@@ -71,4 +70,7 @@ function inject(item) {
 }
 items.forEach(item => {
     inject(item);
+})
+btn.addEventListener("click", function ()
+ {
 })
