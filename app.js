@@ -1,10 +1,10 @@
 items=[
-{name:"Rabbit",price:40.00,category:"Mammal",img:"https://share.google/d27iKlcAiqIvQlbIN"},
-{name:"Axolotl",price:150.00,category:"Amphibian"},
-{name:"Salamander",price:45.00,category:"Amphibian"},
-{name:"Cat",price:30.00,category:"Mammal"},
-{name:"Dog",price:30.00,category:"Mammal"},
-{name:"Owl",price:250.00,category:"Bird"},
+{name:"Rabbit",price:40.00,category:"Mammal",img:"images.jpg"},
+{name:"Axolotl",price:150.00,category:"Amphibian",img:"Axolotls.webp"},
+{name:"Salamander",price:45.00,category:"Amphibian",img:"images.webp"},
+{name:"Cat",price:30.00,category:"Mammal",img:"cat.jpg"},
+{name:"Dog",price:30.00,category:"Mammal",img:"puppy.webp"},
+{name:"Owl",price:250.00,category:"Bird",img:"images(1).jpg"},
 {name:"MockingBird",price:330.00,category:"Bird"},
 {name:"Turkey",price:60.00,category:"Bird"},
 {name:"Parakeets",price:30.00,category:"Bird"},
@@ -64,7 +64,14 @@ function inject(item) {
     <h2 class="card-header">${item.name}</h2>
     <p>Price:$${item.price.toFixed(2)}</p> 
     <p>Category of Animal:${item.category}</p> 
+    <img class="img" src="${item.img}" alt="${item.name}">
     <button>Add to Cart</button>
+
+
+
+
+    
+    
 </div>`
 );
 }
