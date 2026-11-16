@@ -32,29 +32,6 @@ const rodents=items.filter(items=>items.category==="Rodent")
 console.log(rodents)
 const fishs=items.filter(items=>items.category==="Fish")
 console.log(fishs)
-function cart() {
-  let cart=[];
-  return{
-  addItem: function (item) {
-  cart.push(item);
-  console.log(`${item} added to the cart.`);
-  },
-  removeItem: function(item) {
-    cart.splice(item);
-    console.log(`${item} removed from the cart.`);
-  },
-   viewCart: function(item) {
-    if (cart.length===0)
-      console.log ("The cart is empty")
-    else {
-      console.log(cart.join(item))
-    }
-  }
-  }
-}
-const mycart=cart();
-mycart.addItem("balloon")
-mycart.removeItem("balloon")
 
 function inject(item) {
   const container = document.querySelector(".container");
@@ -66,18 +43,41 @@ function inject(item) {
     <p>Category of Animal:${item.category}</p> 
     <img class="img" src="${item.img}" alt="${item.name}">
     <button>Add to Cart</button>
-
-
-
-
-    
-    
 </div>`
 );
 }
 items.forEach(item => {
     inject(item);
 })
-btn.addEventListener("click", function ()
- {
-})
+
+let shoppingCart=[];
+const container=document.querySelector(".container");
+const cartContainer=document.querySelector(".cart-container");
+const total=document.querySelector("#total")
+function displayProducts(items) {
+  container.innerHTML="";
+  items.forEach(inject);
+}
+const buttons=document.querySelectorAll(".add-btn");
+buttons.forEach(function(button,index){
+button.addEventListener("click",function(){
+addItem(items[index]);
+});
+});
+function filterProducts(category) {
+  if (category="All") {
+    displayProducts(items);
+  }
+  else {
+    const filteredProducts=products.filter(function(product){
+return product.category===category;
+});
+displayProducts(filteredProducts);
+}
+}
+const filterButtons=document.querySelectorAll(".btn");
+filterButtons.forEach(function(button){
+  button.addEventListener("click",function(){
+filterProducts(button.textContent)
+  });
+});
