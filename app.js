@@ -20,19 +20,6 @@ items=[
 {name:"Sugar Gliders",price:300.00,category:"Mammal",img:"su.avif"},
 {name:"Frog",price:45.00,category:"Amphibian",img:"fr.jpg"}
 ]
-const amphibians=items.filter(items=>items.category==="Amphibian")
-console.log(amphibians)
-const reptiles=items.filter(items=>items.category==="Reptile")
-console.log(reptiles)
-const mammals=items.filter(items=>items.category==="Mammal")
-console.log(mammals)
-const birds=items.filter(items=>items.category==="Bird")
-console.log(birds)
-const rodents=items.filter(items=>items.category==="Rodent")
-console.log(rodents)
-const fishs=items.filter(items=>items.category==="Fish")
-console.log(fishs)
-
 function inject(item) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
@@ -50,6 +37,23 @@ items.forEach(item => {
     inject(item);
 })
 
+function filterProducts(category) {
+  if (category==="All") {
+    displayProducts(items);
+  }
+  else {
+    const filteredProducts=items.filter(function(product){
+return product.category===category;
+});
+displayProducts(filteredProducts);
+}
+}
+const filterButtons=document.querySelectorAll(".btn");
+filterButtons.forEach(function(button){
+  button.addEventListener("click",function(){
+filterProducts(button.textContent)
+  });
+});
 let shoppingCart=[];
 const container=document.querySelector(".container");
 const cartContainer=document.querySelector(".cart-container");
@@ -61,23 +65,6 @@ function displayProducts(items) {
 const buttons=document.querySelectorAll(".add-btn");
 buttons.forEach(function(button,index){
 button.addEventListener("click",function(){
-addItem(items[index]);
+addItem(items[index]); 
 });
-});
-function filterProducts(category) {
-  if (category="All") {
-    displayProducts(items);
-  }
-  else {
-    const filteredProducts=products.filter(function(product){
-return product.category===category;
-});
-displayProducts(filteredProducts);
-}
-}
-const filterButtons=document.querySelectorAll(".btn");
-filterButtons.forEach(function(button){
-  button.addEventListener("click",function(){
-filterProducts(button.textContent)
-  });
 });
