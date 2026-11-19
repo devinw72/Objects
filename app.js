@@ -68,3 +68,6 @@ button.addEventListener("click",function(){
 addItem(items[index]); 
 });
 });
+function addCart (items) {
+  
+}
