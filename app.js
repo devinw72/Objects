@@ -33,6 +33,7 @@ function inject(item) {
 </div>`
 );
 }
+
 items.forEach(item => {
     inject(item);
 })
@@ -48,8 +49,8 @@ return product.category===category;
 displayProducts(filteredProducts);
 }
 }
-const filterButtons=document.querySelectorAll(".btn");
-filterButtons.forEach(function(button){
+const filterItems=document.querySelectorAll(".btn");
+filterItems.forEach(function(button){
   button.addEventListener("click",function(){
 filterProducts(button.textContent)
   });
@@ -68,6 +69,35 @@ button.addEventListener("click",function(){
 addItem(items[index]); 
 });
 });
-function addCart (items) {
-  
+function displayCart(){
+  cartContainer.innerHTML="";
+ let cartTotal=0;
+  shoppingCart.forEach(function(item,index) {
+    cartTotal=cartTotal+item.price;
+    cartContainer.insertAdjacentHTML(
+      "beforeend",
+      `<div class="cart-item">"
+      <p>${item.name}-$${item.price}</p>
+      <button class="remove-button">Remove</button>
+      </div>`
+
+    );
+});
 }
+function addItem (item) {
+  shoppingCart.push(item);
+  displayCart();
+}
+function removeItem(index){
+  shoppingCart.splice(index,1);
+  displayCart();
+}
+const removeButtons=document.querySelectorAll(".remove-btn");
+removeButtons.forEach(function(button,index){
+  button.addEventListener("click",function(){
+    removeItem(index);
+  });
+});
+
+displayProducts(items);
+displayCart();
