@@ -29,10 +29,16 @@ function inject(item) {
     <p>Price:$${item.price.toFixed(2)}</p> 
     <p>Category of Animal:${item.category}</p> 
     <img class="img" src="${item.img}" alt="${item.name}">
-    <button>Add to Cart</button>
+    <button class="add-btn">Add to Cart</button>
 </div>`
 );
+ const button = container.lastElementChild.querySelector(".add-btn");
+
+  button.addEventListener("click", function(){
+    addItem(item);
+  });
 }
+
 
 items.forEach(item => {
     inject(item);
@@ -63,12 +69,6 @@ function displayProducts(items) {
   container.innerHTML="";
   items.forEach(inject);
 }
-const buttons=document.querySelectorAll(".add-btn");
-buttons.forEach(function(button,index){
-button.addEventListener("click",function(){
-addItem(items[index]); 
-});
-});
 function displayCart(){
   cartContainer.innerHTML="";
  let cartTotal=0;
@@ -76,13 +76,20 @@ function displayCart(){
     cartTotal=cartTotal+item.price;
     cartContainer.insertAdjacentHTML(
       "beforeend",
-      `<div class="cart-item">"
+      `<div class="cart-item">
       <p>${item.name}-$${item.price}</p>
       <button class="remove-button">Remove</button>
       </div>`
 
     );
 });
+const removeButtons=document.querySelectorAll(".remove-button");
+removeButtons.forEach(function(button,index){
+  button.addEventListener("click",function(){
+    removeItem(index);
+  });
+});
+total.textContent=cartTotal.toFixed(2)
 }
 function addItem (item) {
   shoppingCart.push(item);
@@ -92,12 +99,5 @@ function removeItem(index){
   shoppingCart.splice(index,1);
   displayCart();
 }
-const removeButtons=document.querySelectorAll(".remove-btn");
-removeButtons.forEach(function(button,index){
-  button.addEventListener("click",function(){
-    removeItem(index);
-  });
-});
-
 displayProducts(items);
 displayCart();
