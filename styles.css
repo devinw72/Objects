@@ -19,7 +19,8 @@ background-position: center;
     align-items: center;
     gap: 3rem;
     font-size: 25px;
-    font-family:cursive
+    font-family:cursive;
+    border:3px solid #084B83
 }
 .container {
     display: flex;
@@ -27,9 +28,10 @@ background-position: center;
     justify-content: space-evenly;
     align-items: center;
     background-color:rgb(128, 206, 215);
+   
 }
 .p {
-font-size:5px
+font: size 5px;
 }
 .img {
 width: 20rem; 
@@ -46,4 +48,19 @@ font-weight: bold;
 html{
 background-color:rgb(128, 206, 215);   
 }
+.shopping-cart{
+font-weight: bolder;
+}
+.cart-item{
+font-size: 23px;
+font-weight: 400;
+}
+h1{
+font-size: 50px;
+}
+h2{
+font-size: 40px;
+}
+.cart-container{
 
+}
